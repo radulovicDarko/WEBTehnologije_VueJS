@@ -72,10 +72,11 @@
     transform: translate3d(4px, 0, 0);
   }
 }
+
 @media (max-width: 991px){
   .row img:not(.kartice) {
     padding-bottom: 20% !important;
-  } 
+} 
 
   #logo {
     max-width: 15rem;
@@ -96,17 +97,23 @@
 
 .kartica {
   box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
-  border-radius: 16%;
+  border-bottom-right-radius: 16%;
+  border-bottom-left-radius: 16%;
 }
 
 .team img {
-  filter: grayscale(00%);  
+  filter: grayscale(100%);  
   transition: 600ms ease-in-out;
 }
 
 .team img:hover {
   filter: grayscale(0);
   transition: 400ms ease-in-out;
+  transform: scale(1.1) rotate(2deg);
+}
+
+.team {
+  overflow: hidden;
 }
 
 .teamSlike img {
@@ -182,7 +189,11 @@ footer a:hover{
 }
 
 #about h1 {
-	font-family: Fjalla One;
+  font-family: Fjalla One;
+}
+
+#firstSection h1{
+  font-family: Fjalla One;
 }
 
 /* MEET THE VUE TEAM */
