@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel = "icon" href = "https://vuejs.org/images/logo.png" type = "image/x-icon"> 
+    <title>Contact</title>
+  </head>
+  
+  <!-- NAVBAR -->
+  <header> 
+    <nav class="navbar navbar-expand-sm navbar-dark bg-light fixed-top">
+      <div class="container">
+          <a href="https://vuejs.org/" target="_blank"><img id="brand-logo" src="https://vuejs.org/images/logo.png" alt=""></a>
+      <a href="index.html" id="brand" class="navbar-brand ml-5">Vue.js</a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a href="index.html" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a href="guide.html" class="nav-link">ABOUT</a>
+            </li>
+            <li id="liItem" class="nav-item dropdown mt-2">
+                    <a href="ecosystem.html">
+                        ECOSYSTEM <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                      <a href="vuerouter.html">Vue Router</a>
+                      <a href="vuex.html">Vuex</a>
+                      <a href="vueserverrenderer.html">Vue Server Renderer</a>
+                    </div>  
+            </li>
+            <li class="nav-item">
+                <a href="team.html" class="nav-link">TEAM</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact us.html" class="nav-link">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</header> 
+
+  <body>
+      <div id="googleMaps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.0160193118163!2d20.34263321592797!3d43.896934944652834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4757721aaff632bd%3A0xbddc942f15d8696d!2sFaculty%20of%20Technical%20Sciences!5e0!3m2!1sen!2srs!4v1613991564866!5m2!1sen!2srs" width="100%" height="100%" style="border: 0;"  allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <div id="contactForm" class="container d-flex" style="height: 100vh;">
+        <div class="row align-items-center justify-content-center mx-auto my-auto" id="formRow">
+            <div class="row" style="overflow: hidden;">
+                <div class="col-lg-6 text-center js-tilt h-100 my-auto" data-tilt>
+                    <img src="img/img-01.png" id="contactImg" class="p-0" alt="">
+                </div>
+                <div class="col-lg-6 h-100 ">
+
+                      <form>
+                        <div class="form-row"> 
+                            <div class="naslov">       
+                                <h1 class="pt-5 pb-4">Pošaljite nam poruku</h1>
+                            </div>
+                          <div class="col-lg-8 col-md-10 mb-3 mx-left wrapper pb-2">
+                            <label for="validationServer01">Puno ime*</label>
+                            <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Unesite puno ime" required>
+                          </div>
+                          <div class="col-lg-8 col-md-10 mb-3 mx-left wrapper pb-2">
+                            <label for="validationServer02">Email*</label>
+                            <input type="email" class="form-control is-valid" id="validationServer02" placeholder="Unesite email adresu" required>
+                          </div>
+                          <div class="col-lg-8 col-md-10 mb-3 mx-left wrapper pb-4">
+                            <label for="validationServer02">Poruka*</label>
+                            <textarea type="text" class="form-control is-valid" id="validationServer02" placeholder="Unesite poruku" required></textarea>
+                          </div>
+                          <div class="col-lg-8 mx-auto text-left wrapper pb-5" id="buttonWrapper">
+                            <button class="btn btn-success mx-auto" type="submit">Submit</button>
+                          </div>
+                    </div>
+                      </form>
+                </div>
+            </div>  
+        </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>VueRouter</title>
+  </head>
+
+   <!-- NAVBAR -->
+   <header> 
+    <nav class="navbar navbar-expand-sm navbar-dark bg-light">
+        <div class="container">
+            <a href="https://vuejs.org/" target="_blank"><img id="brand-logo" src="https://vuejs.org/images/logo.png" alt=""></a>
+        <a href="index.html" id="brand" class="navbar-brand ml-5">Vue.js</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a href="index.html" class="nav-link">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a href="guide.html" class="nav-link">ABOUT</a>
+            </li>
+            <li id="liItem" class="nav-item dropdown mt-2">
+                    <a href="ecosystem.html">
+                        ECOSYSTEM <i class="fa fa-caret-down"></i>
+                    </a>
+                    <div class="dropdown-content">
+                      <a href="vuerouter.html">Vue Router</a>
+                      <a href="vuex.html">Vuex</a>
+                      <a href="vueserverrenderer.html">Vue Server Renderer</a>
+                    </div>  
+            </li>
+            <li class="nav-item">
+                <a href="team.html" class="nav-link">TEAM</a>
+            </li>
+            <li class="nav-item">
+                <a href="contact us.html" class="nav-link">CONTACT</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+</header> 
+
+  <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <section id="vueRouterSection"> 
+    
+        <!-- Header -->
+        <div class="bg-dark text-center py-3 mb-5">
+          <div class="container">
+            <h1 class="font-weight-light text-white">Instaliranje Vue Router-a</h1>
+          </div>
+        </div>
+      
+        <div class="p-4 jumbotron mx-5 text-center" style="background: #4b4b4b; color: whitesmoke;">
+            <h3>Direct Download / CDN</h3>
+            <div class="row">
+            <p class="text1 col-lg-12 " >Unpkg.com pruža CDN veze zasnovane na npm. Gornja veza će uvek voditi do najnovijeg izdanja na npm. Takođe možete da koristite određenu verziju / oznaku putem URL-ova poput https://unpkg.com/vue-router@2.0.0/dist/vue-router.js.
+
+                Uključite vue-router nakon Vue-a i on će se automatski instalirati:</p></div>
+            <div class="bg-light py-2 text-center">
+              <code class="text-success">
+                &lt;script src="/path/to/vue.js"> /script &gt;
+                <br>&lt;script src="/path/to/vue-router.js"> /script&gt;
+              </code>
+            </div>
+            <div class="text-left pt-3">
+              <p>Instalacija npm-a</p>
+            </div>
+            <div class="bg-light py-2 text-center mb-3">
+              <code class="text-success">
+                &lt;npm install vue-router&gt;
+              </code>
+            </div>
+            <div class="text-left">
+            <p>Kada se koristi sa sistemom modula, ruter morate izričito instalirati putem Vue.use ():</p>
+        </div>
+        <div class="bg-light py-2 text-center">
+            <code class="text-success">
+              &lt;import Vue from 'vue'&gt;
+              <br>&lt;import VueRouter from 'vue-router'&gt;
+              <br>
+              <br>&lt;Vue.use(VueRouter)&gt;
+            </code>
+          </div>
+          <div class="text-left mb-3">
+              <p>Napomena: Ne morate to da radite kada koristite globalne oznake skripti.</p>
+          </div>
+              </div>
+
+              <div class="p-4 jumbotron mx-5 text-center" style="background: #4b4b4b; color: whitesmoke;">
+                <h3>Vue CLI</h3>
+                <div class="row">
+                <p class="text1 col-lg-12 " >Ako imate projekat koji koristi Vue CLI, možete dodati Vue Router kao dodatak. Možete da dozvolite CLI-u da generiše gore navedeni kod, kao i dva uzorka rute. Takođe će prepisati vaš App.vue, pa obavezno napravite rezervnu kopiju datoteke pre pokretanja sledeće naredbe u vašem projektu:</p></div>
+                <div class="bg-light py-2 text-center">
+                  <code class="text-success">
+                    vue add router
+                  </code>
+                </div>
+                <div class="text-left pt-3">
+                  <p>Instalacija Vue Cli-a</p>
+                </div>
+                <div class="bg-light py-2 text-center mb-3">
+                  <code class="text-success">
+                    npm install -g @vue/cli
+                  </code>
+                </div>
+                <div class="text-left pt-3">
+                    <p>Kreiranje projekta</p>
+                  </div>
+            <div class="bg-light py-2 text-center">
+                <code class="text-success">
+                    vue create my-project
+                </code>
+              </div>
+              <div class="text-left pt-2 pb-2">
+                  <p>Napomena: Vue Cli možemo dodati kao plugin ili ga instalirati kao što je prikazano u primeru iznad, ali nikada ne radimo oba.</p>
+              </div>
+                  </div>
+
+                  <div class="p-4 jumbotron mx-5 text-center" style="background: #4b4b4b; color: whitesmoke;">
+                    <h3>Dev build</h3>
+                    <div class="row">
+                    <p class="text1 col-lg-12 " >Moraćete da klonirate direktno sa GitHub-a i sami napravite vue-router ako želite da koristite najnoviju verziju Dev build-a.</p></div>
+                    <div class="bg-light py-2 text-center">
+                        <code class="text-success">
+                            git clone https://github.com/vuejs/vue-router.git node_modules/vue-router
+                            <br>cd node_modules/vue-router
+                            <br>npm install
+                            <br>npm run build
+                          </code>
+                    </div>
+                    <div class="text-left pb-2">
+                        <p>Preporuka je da sami napravite Vue-router jer time obezbeđujete korišćenje najnovije verzije, a samim tim i veću efikasnost.</p>
+                    </div>
+                      </div>
+                      
+                      <!-- Header -->
+                    <div class="bg-dark text-center py-3">
+                        <div class="container">
+                          <h1 class="font-weight-light text-white py-4">Korišćenje Vue Router-a</h1>
+                        </div>
+
+                        <div class="container pb-5">
+                            <iframe width="100%" height="600" src="https://www.youtube.com/embed/juocv4AtrHo"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                            encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+                        </div>
+                    </div>  
+                    <div style="background-color: rgb(95, 95, 95);" class="text-center pb-3">
+                        <div class="container">
+                          <h1 class="font-weight-light text-white py-4">Korišćenje Vue Router-a</h1>
+                        </div>
+
+                        <div class="container pb-5">
+                          <p class="text-white mb-0 pb-0 text-justify">
+                            Stvaranje aplikacije na jednoj stranici pomoću Vue + Vue rutera deluje prirodno: sa Vue.js već komponujemo
+                             aplikaciju sa komponentama. Kada dodamo Vue Router u miks, sve što treba da uradimo je da mapiramo naše
+                              komponente na rute kako bi Vue Router znao gde da ih prikaže. Pogledajmo to na prostom primeru:
+                          </p>
+                      </div>
+
+                      <div class="container">
+                        <p style="font-size: 2rem; border-bottom: 1px solid white; border-radius: 30px;" class="text-center text-white">
+                          HTML
+                        </p>
+                        <img src="img/VueRouterHTML.png" class="img-fluid my-3" style="border-radius: 5px;" alt="Vuex">  
+                      </div>
+
+                      <div class="container">
+                        <p style="font-size: 2rem; border-bottom: 1px solid white; border-radius: 30px;" class="text-center text-white">
+                          JavaScript
+                        </p>
+                        <img src="img/VueRouterJS.png" class="img-fluid my-3" style="border-radius: 5px;" alt="Vuex">  
+                      </div>
+
+                      <div class="container">
+                        <p class="text-white"> 
+                          Ubrizgavanjem rutera dobijamo pristup preko objekta this.$router kao i trenutnu rutu preko this.$route objekta, unutar bilo koje komponente:
+                        </p>
+                        
+                        <img src="img/VueRouterJS.png" class="img-fluid my-3" style="border-radius: 5px;" alt="Vuex">  
+                        <p class="text-white"> 
+                          Kroz dokumente ćemo često koristiti instancu rutera. Imajte na umu da je this.$router potpuno isto kao i ruter. Razlog zašto koristimo this.$router je taj što ne želimo da uvozimo ruter u svaku pojedinu komponentu koja treba da manipuliše rutiranjem.                         
+                          <br><br>
+                          Ovaj primer možete pogledati i <a style="color: rgb(43, 168, 168); text-decoration: none;" href="https://jsfiddle.net/yyx990803/xgrjzsup/" target="_blank"><strong>uživo</strong></a>.
+                          <br><br>
+                          Primetite da <span style="color: rgb(43, 168, 168);"><strong>&lt;router-link&gt;</strong></span> automatski dobija klasu .router-link-active kada se podudari njegova ciljana ruta. O tome možete saznati više u <a style="color: rgb(43, 168, 168); text-decoration: none;" href="https://router.vuejs.org/api/#exact-path" target="_blank"><strong>referenci za API.</strong></a>
+                        <p>
+                      </div>
+                    </div>
+      </section>   
+
+      <!-- FOOTER -->
+      <footer class="py-4 bg-dark flex-shrink-0">
+        <div class="container text-center">
+          <a href="https://vuejs.org" target="_blank" class="text-white text-muted">Guide @ FTN Čačak 2021</a>
+        </div>
+      </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
