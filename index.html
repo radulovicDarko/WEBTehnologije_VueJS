@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet">
     <link rel = "icon" href = "https://vuejs.org/images/logo.png" type = "image/x-icon"> 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <title>Vue.js</title>
   </head>
       
@@ -36,16 +37,23 @@
                     <a href="index.html" class="nav-link">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <a href="guide.html" class="nav-link">ABOUT</a>
                 </li>
-                <li class="nav-item">
-                    <a href="services.html" class="nav-link">EXAMPLES</a>
+                <li id="liItem" class="nav-item dropdown mt-2">
+                        <a href="ecosystem.html">
+                            ECOSYSTEM <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-content">
+                          <a href="vuerouter.html">Vue Router</a>
+                          <a href="vuex.html">Vuex</a>
+                          <a href="vueserverrenderer.html">Vue Server Renderer</a>
+                        </div>  
                 </li>
                 <li class="nav-item">
                     <a href="team.html" class="nav-link">TEAM</a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.html" class="nav-link">CONTACT</a>
+                    <a href="contact us.html" class="nav-link">CONTACT</a>
                 </li>
                 </ul>
             </div>
@@ -54,6 +62,8 @@
     </header> 
     
   <body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
         <!-- carousel -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -128,7 +138,7 @@
           <!-- Header -->
         <div class="bg-dark text-center py-3 mb-5">
           <div class="container">
-            <h1 class="font-weight-light text-white pt-3">What is Vue.js</h1>
+            <h1 class="font-weight-light text-white pt-3"><strong>What is Vue.js</strong></h1>
           </div>
         </div>
         

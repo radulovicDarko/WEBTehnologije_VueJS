@@ -15,6 +15,36 @@
 
 /* NAVBAR */
 
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+#liItem a:hover {
+	text-decoration: none;
+}
+
+.dropdown-content a {
+float: none;
+padding: 10px 14px;
+text-decoration: none;
+display: block;
+text-align: left;
+font-size: 1.4rem !important;
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
 .navbar {
     background-color: #4B4B4B !important;
     font-size: 1.3rem;
@@ -151,7 +181,7 @@
 }
 
 .overlay p {
-	font-size: 2rem;
+	font-size: 1.3rem;
 }
 
 /* FOOTER */ 
@@ -283,3 +313,106 @@ footer a:hover{
 	  margin-top: 30px !important;
 	}
 }
+
+/* ECOSYSTEM */
+
+#ecosystem {
+	font-family: 'Benne', serif;
+	font-size: 1.5rem;
+	box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+	background-color: #FAFAFA !important;
+}
+
+.card-body {
+	font-family: 'Crimson Text', serif;
+}
+
+.card-footer a {
+	font-size: 1.2rem;
+	font-family: sans-serif;
+}
+
+.card-footer a:hover {
+	background-color: #ffffff;
+	color: green;
+}
+
+#ekosistemBody {
+	background-color: #3bb78f;
+	
+	background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+}
+
+#row {
+	width: 95%;
+}
+
+/* Vue Router */
+
+#googleMaps {
+	width: 100%;
+	height: 100%;
+	position: absolute;	
+	z-index: 0;
+}
+
+#contactForm {
+	z-index: 1;
+	position: relative;
+}
+
+#formRow{
+	background-color: #ffffff; 
+	border-radius: 30px;
+	border: 1px solid rgba(128, 128, 128,0.6);
+}
+
+ input, textarea {
+	background-color: #E6E6E6 !important;
+	height: 3rem;
+	border-radius: 25px !important;
+}
+
+form button {
+	height: 3rem;
+	border-radius: 25px !important;
+	width: 10rem;
+}
+
+@media (max-width: 991px){
+	.wrapper, .naslov {
+		margin: 0 auto;
+	}
+
+	#buttonWrapper {
+		text-align: center !important;
+	}
+
+	#contactImg {
+		padding-bottom: 0 !important;
+	}
+
+	#formRow {
+		margin-top: 7rem !important;
+	}
+}
+
+#myBtn {
+	display: none; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: green; /* Set a background color */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	padding: 15px; /* Some padding */
+	border-radius: 10px; /* Rounded corners */
+	font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+	background-color: rgb(1, 145, 1); /* Add a dark-grey background on hover */
+  }
